@@ -24,11 +24,13 @@ class Main:
 
     @property
     def longitud(self):
-        return float(self.read_sqlOld("select Longitude from estaciones where codigo = %s"%self.codigo)[0][0]) 
+       '''Muestra la longitud de la estacion'''
+	 return float(self.read_sqlOld("select Longitude from estaciones where codigo = %s"%self.codigo)[0][0]) 
     
     @property
     def latitud(self):
-        return float(self.read_sqlOld("select Latitude from estaciones where codigo = %s"%self.codigo)[0][0]) 
+        '''Muestra la latitud de la estacion'''
+	return float(self.read_sqlOld("select Latitude from estaciones where codigo = %s"%self.codigo)[0][0]) 
     @property
     def municipio(self):
         '''Encuentra el municipio donde se encuentra ubicada la estacion'''
